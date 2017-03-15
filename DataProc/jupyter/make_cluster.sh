@@ -1,6 +1,6 @@
 #!/bin/bash
 gcloud dataproc clusters create jupyter-dataproc \
-    --metadata "JUPYTER_PORT=8124,JUPYTER_CONDA_PACKAGES=numpy:pandas:scikit-learn:matplotlib:ggplot:plotly:bokeh" \
+    --metadata "JUPYTER_PORT=8124,JUPYTER_CONDA_PACKAGES=numpy:pandas:scikit-learn:matplotlib:plotly:bokeh" \
     --initialization-actions \
         gs://dataproc-initialization-actions/jupyter/jupyter.sh \
     --num-workers 2 \
